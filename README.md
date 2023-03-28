@@ -2,7 +2,7 @@
 
 ## Harshit Verma
 
-**Abstract:**
+##Abstract:
 
 Recently many developments are being made to make GNNs learn algorithms and then to simulate them.
 
@@ -12,7 +12,7 @@ The ultimate motive of this research is to study and improve expressibility in G
 
 Developments in this problem can also be extended to teach GNNs non deterministic finite automaton, which can then solve a NP-Hard problem of acceptance of a string by a ndfa.
 
-**Problem Setup:**
+##Problem Setup:
 
 Currently I have attempted to make models which take any graph as input and the string which acceptance is to be tested is fixed.
 
@@ -28,7 +28,7 @@ The motivation behind posing this problem as a regression problem rather than ju
 
 So by posing the problem in this way the model learns how to traverse the automata according to the string and then label it as yes/no according to the last state reached in the graph.
 
-**Dataset:**
+## Dataset:
 
 I have made a custom dataset for this problem.
 
@@ -42,7 +42,7 @@ Number of final states range from 1 to n/3 .
 
 At Least 1 final state is reachable from the starting state.
 
-**Node features:**
+### Node features:
 
 Each node has two features with each feature taking the value as 0 or 1. 0 1 -> starting node
 
@@ -52,21 +52,22 @@ Each node has two features with each feature taking the value as 0 or 1. 0 1 -> 
 
 0 0 -> normal node
 
-**Edge features:**
+### Edge features:
 
 Each edge has two features with each feature taking the value as 0 or 1. 0 1 -> edge with label ‘0’.
 
 1 0 -> edge with label ‘1’.
 
-**Adjacency matrix** (a) where a[i][j]=1 if i and j node values are connected with alphabet ‘0’ and a[i][j]=2 if connected with alphabet ‘1’.
+### Adjacency matrix 
+(a) where a[i][j]=1 if i and j node values are connected with alphabet ‘0’ and a[i][j]=2 if connected with alphabet ‘1’.
 
-**Output Vector:**
+### Output Vector:
 
 The output vector has been described above.
 
 One reason for scaling the last value (which signifies the acceptance) to 100 instead of 1 is that the model incurs more loss if it makes the wrong prediction, since our main objective is to make a model which makes the prediction of acceptance.
 
-**Experimental Setup:**
+## Experimental Setup:
 
 First I experimented with different convolution layers to infer which type of convolution will perform the best.
 
@@ -82,7 +83,7 @@ In the end I also tried the **GeneralGNN6** model on this problem.
 
 Number of epochs=10, Optimizer=Adam, Batch\_size=32,Loss=Mean Squared Error, train\_test split =85%
 
-**Results:**
+## Results:
 
 Let X be the overall accuracy accounting for both accepted and not accepted and let Y be the accuracy in predicting just accepted.
 
@@ -112,7 +113,7 @@ GeneralGNN Model
 
 X=72.93 Y=45.8 Loss= 59.21
 
-**Conclusion:**
+## Conclusion:
 
 The experiments clearly state that the best convolution layer for this problem turns out to be Edge Conditioned convolution layer.
 
@@ -120,7 +121,7 @@ The next best is the GeneralGNN model.
 
 In every case we can see that after replacing the last layer as message passing(Model B) X and Y both increase, meaning that message passing layer improves the performance in every case.
 
-**Implementation Details:**
+## Implementation Details:
 
 Code available at https://github.com/harshit5674/Simulating-DFA-using-GNNs
 
@@ -128,7 +129,7 @@ The repository contains
 
 1 notebook to generate dataset. 1 notebook with all the models. The dataset.
 
-**References:**
+## References:
 
 1) <https://arxiv.org/abs/1704.02901>
 1) <https://arxiv.org/abs/1710.10903>
