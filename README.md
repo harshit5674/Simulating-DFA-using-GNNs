@@ -2,7 +2,7 @@
 
 ## Harshit Verma
 
-##Abstract:
+## Abstract:
 
 Recently many developments are being made to make GNNs learn algorithms and then to simulate them.
 
@@ -12,7 +12,7 @@ The ultimate motive of this research is to study and improve expressibility in G
 
 Developments in this problem can also be extended to teach GNNs non deterministic finite automaton, which can then solve a NP-Hard problem of acceptance of a string by a ndfa.
 
-##Problem Setup:
+## Problem Setup:
 
 Currently I have attempted to make models which take any graph as input and the string which acceptance is to be tested is fixed.
 
