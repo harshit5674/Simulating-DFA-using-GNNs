@@ -1,6 +1,6 @@
-##Simulating Finite Automaton using GNNs
+# Simulating Finite Automaton using GNNs
 
-**Harshit Verma**
+## Harshit Verma
 
 **Abstract:**
 
