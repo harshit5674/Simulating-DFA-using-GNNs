@@ -1,7 +1,5 @@
 # Simulating Finite Automaton using GNNs
 
-## Harshit Verma
-
 ## Abstract:
 
 Recently many developments are being made to make GNNs learn algorithms and then to simulate them.
