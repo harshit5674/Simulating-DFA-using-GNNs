@@ -97,7 +97,9 @@ For Model Type A
 |Graph Attention layer(2)|66\.49|33\.4|70\.5|
 |Attention-based Graph Neural Network(3)|63\.72|27\.6|70\.46|
 |General convolutional layer(4)|66\.77|42\.34|62\.63|
-|Graph Sage(5)|68\.97|35\.03|61\.57|
+|Graph Sage(5)|68\.97|35\.03|61\.57
+
+
 For Model Type B
 
 
@@ -109,9 +111,8 @@ For Model Type B
 |Attention-based Graph Neural Network(3)|64\.29|28\.52|70\.46|
 |General convolutional layer(4)|68\.2|50\.95|62\.63|
 |Graph Sage(5)|69\.34|40\.06|61\.57|
-GeneralGNN Model
+GeneralGNN Model|72\.93|45\.8|59\.21
 
-X=72.93 Y=45.8 Loss= 59.21
 
 ## Conclusion:
 
